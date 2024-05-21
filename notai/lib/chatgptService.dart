@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ChatGptService {
+
+  final String apiKey = 'myApiKey';
   Future<String> getChatGptResponse(String question, List<String> notes) async {
     final url = Uri.parse('https://api.openai.com/v1/chat/completions');
     final headers = {
